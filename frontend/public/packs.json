@@ -1,0 +1,46 @@
+[
+  {
+    "pack": 1,
+    "amount": "50"
+  },
+  {
+    "pack": 2,
+    "amount": "100"
+  },
+  {
+    "pack": 3,
+    "amount": "199"
+  },
+  {
+    "pack": 4,
+    "amount": "300"
+  },
+  {
+    "pack": 5,
+    "amount": "500"
+  },
+  {
+    "pack": 6,
+    "amount": "1000"
+  },
+  {
+    "pack": 7,
+    "amount": "2000"
+  },
+  {
+    "pack": 8,
+    "amount": "3000"
+  },
+  {
+    "pack": 9,
+    "amount": "5000"
+  },
+  {
+    "pack": 10,
+    "amount": "10000"
+  },
+  {
+    "pack": 11,
+    "amount": "50000"
+  }
+]
