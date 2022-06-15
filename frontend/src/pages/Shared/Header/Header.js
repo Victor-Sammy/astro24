@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
     // rendering the header component here
     return (
-        <header className='bg-primary w-full fixed'>
+        <header className='bg-primary w-full fixed z-50'>
             <nav className='md:w-4/5 mx-auto'>
                 <div className='navbar text-accent py-5'>
                     <div className='navbar-start'>
@@ -13,7 +14,7 @@ const Header = () => {
                                 <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h8m-8 6h16' /></svg>
                             </label>
                             <ul tabIndex='0' className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52'>
-                                <li><a>Item 1</a></li>
+                                <li><Link to="/wallet">Wallet</Link></li>
                                 <li><a>Item 3</a></li>
                                 <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
                             </ul>
@@ -22,7 +23,7 @@ const Header = () => {
                     </div>
                     <div className='navbar-end hidden md:inline-flex'>
                         <ul className='menu menu-horizontal p-0'>
-                            <li><a>Item 1</a></li>
+                            <li><Link to="/wallet">Wallet</Link></li>
                             <li><a>Item 3</a></li>
                         </ul>
                         <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
