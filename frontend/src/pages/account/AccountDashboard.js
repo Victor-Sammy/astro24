@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const AccountDashboard = () => {
     return (
@@ -10,7 +10,9 @@ const AccountDashboard = () => {
                 <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex flex-col items-center justify-center">
                     {/* <!-- Page content here --> */}
-                    <div className='w-full h-screen bg-base-100'></div>
+                    <div className='w-full h-screen bg-base-100'>
+                        <Outlet></Outlet>
+                    </div>
                     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
                 </div>
@@ -32,19 +34,19 @@ const AccountDashboard = () => {
                                     <h4 className='text-lg font-semibold'>Dr Someone</h4>
                                 </div>
                             </div>
+
                         </div>
 
-                        {/* dash nav */}
+                        {/* dash  */}
                         <div className='w-full h-screen  bg-base-100 mt-4 px-6'>
                             <p className='text-lg font-semibold  flex justify-start items-center gap-2 mt-4'><FontAwesomeIcon className='text-primary' icon={faUser} /> ACCOUNT SETTING</p>
+                            {/* Links */}
                             <ul className='flex flex-col  items-start ml-3 '>
-                                <li><NavLink to="/">Profile Information</NavLink></li>
-                                <li><NavLink to="/">Manage Address</NavLink></li>
-                                <li><NavLink to="/">PAN Card Information</NavLink></li>
+                                <li><Link to="/account">Profile Information</Link></li>
+                                <li><Link to="/account/manage-address">Manage Address</Link></li>
+                                <li><Link to="/account/card-info">PAN Card Information</Link></li>
 
                             </ul>
-
-
                         </div>
                     </div>
 
