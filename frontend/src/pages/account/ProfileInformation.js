@@ -6,7 +6,7 @@ const ProfileInformation = () => {
     const [editPhone, setEditPhone] = useState(false)
 
     return (
-        <div className='flex flex-col items-start p-8'>
+        <div className='flex flex-col items-start p-8 justify-start'>
             {/* personal info */}
             <div>
                 <p className='flex gap-4'>

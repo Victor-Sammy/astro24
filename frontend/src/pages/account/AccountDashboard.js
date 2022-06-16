@@ -5,13 +5,13 @@ import { Link, Outlet } from 'react-router-dom';
 
 const AccountDashboard = () => {
     return (
-        <div className='pt-28 bg-base-200'>
+        <div className='pt-24 bg-base-200'>
             <div class="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex flex-col items-center justify-center">
                     {/* <!-- Page content here --> */}
-                    <div className='w-full bg-base-100'>
-                        <Outlet></Outlet>
+                    <div className='w-full bg-base-100 h-screen mt-4'>
+                        <Outlet />
                     </div>
                     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
