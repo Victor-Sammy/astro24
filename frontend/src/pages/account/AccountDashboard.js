@@ -10,7 +10,7 @@ const AccountDashboard = () => {
                 <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex flex-col items-center justify-center">
                     {/* <!-- Page content here --> */}
-                    <div className='w-full h-screen bg-base-100'>
+                    <div className='w-full bg-base-100'>
                         <Outlet></Outlet>
                     </div>
                     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
