@@ -15,7 +15,8 @@ const Header = () => {
                             </label>
                             <ul tabIndex='0' className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52'>
                                 <li><Link to="/wallet">Wallet</Link></li>
-                                <li><a>Item 3</a></li>
+                                <li><Link to="/account">Wallet</Link></li>
+
                                 <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
                             </ul>
                         </div>
@@ -24,7 +25,7 @@ const Header = () => {
                     <div className='navbar-end hidden md:inline-flex'>
                         <ul className='menu menu-horizontal p-0'>
                             <li><Link to="/wallet">Wallet</Link></li>
-                            <li><a>Item 3</a></li>
+                            <li><Link to="/account">Account</Link></li>
                         </ul>
                         <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
                     </div>
