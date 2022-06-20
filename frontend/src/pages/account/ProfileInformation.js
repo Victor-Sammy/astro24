@@ -14,7 +14,7 @@ const ProfileInformation = () => {
             {/* email update */}
             <UpdateEmail />
             {/* phone number update update */}
-            <UpdatePhone />
+            {/* <UpdatePhone /> */}
         </div>
     );
 };

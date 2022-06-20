@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import auth from '../../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { BsGoogle } from 'react-icons/bs';
@@ -16,24 +16,26 @@ const SocialLogin = () => {
         await signInWithGoogle();
     }
 
-    // eslint-disable-next-line no-empty-pattern
-    // const [] = useAccount(user)
+    //create a account for user
+    useEffect(() => {
+        if (user) {
+            const email = user?.user?.email
+            const displayName = user?.user?.displayName
+            const name = displayName.split(" ")
+            const UpdateData = { email: email, first_name: name[0], last_name: name[1] }
+            console.log(user?.user?.displayName);
+            (async () => {
+                const { data } = await axios.put(
+                    `http://localhost:5000/users/${user?.email}`,
+                    UpdateData
+                );
+                console.log(data);
+            })();
+            toast.success('Logged In Successfully!!!');
+        }
+    }, [user])
 
 
-    if (user) {
-        const email = user?.user?.email
-        const displayName = user?.user?.displayName
-        const UpdateData = { email, displayName }
-        console.log(user?.user?.displayName);
-        (async () => {
-            const { data } = await axios.put(
-                `http://localhost:5000/users/${user?.email}`,
-                UpdateData
-            );
-            console.log(data);
-        })();
-        toast.success('Logged In Successfully!!!');
-    }
 
     if (loading) {
         //loading component will be added later here
