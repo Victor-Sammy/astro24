@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import useAccount from '../../hooks/useAccount';
+import UpdateGender from './UpdateGender';
 import UpdateName from './UpdateName';
 
 const ProfileInformation = () => {
@@ -25,20 +26,7 @@ const ProfileInformation = () => {
             {/* personal info */}
             <UpdateName />
             {/* gender */}
-            <section className='text-start mt-8'>
-
-                <p className='mb-4'>Your gender</p>
-                <form className='flex items-center  gap-4'>
-
-                    <input type="radio" name="radio-1" class="radio" checked />
-                    <label >Male</label>
-
-
-                    <input type="radio" name="radio-1" class="radio" />
-                    <label >Female</label>
-
-                </form>
-            </section>
+            <UpdateGender />
             {/* email update */}
             <section className='mt-16'>
                 <p className='flex gap-4'>
