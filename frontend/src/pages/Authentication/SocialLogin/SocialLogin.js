@@ -4,6 +4,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { BsGoogle } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import useAccount from '../../../hooks/useAccount';
 
 const SocialLogin = () => {
     // integration of react firebase hooks here
@@ -15,7 +16,12 @@ const SocialLogin = () => {
         await signInWithGoogle();
     }
 
+    // eslint-disable-next-line no-empty-pattern
+    // const [] = useAccount(user)
+    useAccount(user?.user)
+
     if (user) {
+        console.log(user);
         toast.success('Logged In Successfully!!!');
     }
 
