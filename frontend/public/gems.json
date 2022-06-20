@@ -8,5 +8,64 @@
     "ratings": 5.00,
     "totalVotes": 500,
     "sizes": [1, 2, 2.5, 3.5],
-    "images": ["https://imgpile.com/images/RfsTb3.png", "https://imgpile.com/images/Rfs5Sb.png", "https://imgpile.com/images/RfswH8.png", "https://imgpile.com/images/RfsUGS.png", "https://imgpile.com/images/Rfsbml.png"]
+    "images": [
+        {
+            "original": "https://imgpile.com/images/RfsTb3.png",
+            "thumbnail": "https://imgpile.com/images/RfsTb3.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfs5Sb.png",
+            "thumbnail": "https://imgpile.com/images/Rfs5Sb.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfswH8.png",
+            "thumbnail": "https://imgpile.com/images/RfswH8.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfsUGS.png",
+            "thumbnail": "https://imgpile.com/images/RfsUGS.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfsbml.png",
+            "thumbnail": "https://imgpile.com/images/Rfsbml.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfs5Sb.png",
+            "thumbnail": "https://imgpile.com/images/Rfs5Sb.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfswH8.png",
+            "thumbnail": "https://imgpile.com/images/RfswH8.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfsUGS.png",
+            "thumbnail": "https://imgpile.com/images/RfsUGS.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfsbml.png",
+            "thumbnail": "https://imgpile.com/images/Rfsbml.png"
+        },
+        {
+            "original": "https://imgpile.com/images/RfswH8.png",
+            "thumbnail": "https://imgpile.com/images/RfswH8.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfsUGS.png",
+            "thumbnail": "https://imgpile.com/images/RfsUGS.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfsbml.png",
+            "thumbnail": "https://imgpile.com/images/Rfsbml.png"
+        }
+    ]
 }
