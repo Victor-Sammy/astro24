@@ -9,6 +9,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 const AccountDashboard = () => {
     //user from firebase useAuthState hook
     const [user, loading] = useAuthState(auth)
+    //is loading
+    if (loading) return <p>Loading...</p>
 
     return (
         <div className='pt-24 bg-base-200'>
@@ -32,7 +34,7 @@ const AccountDashboard = () => {
                             <div className='bg-base-100 flex px-4 py-2 gap-4 rounded-sm'>
                                 <div class="avatar">
                                     <div class="w-12 h-12 rounded-full">
-                                        <img src={`${user?.photoURL || "https://i.ibb.co/yVMbCBF/images.jpg"}`} />
+                                        <img src={`${user?.photoURL || "https://i.ibb.co/yVMbCBF/images.jpg"}`} alt="" />
                                     </div>
                                 </div>
                                 <div className='flex items-start flex-col '>

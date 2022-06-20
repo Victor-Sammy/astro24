@@ -4,7 +4,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { BsGoogle } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import useAccount from '../../../hooks/useAccount';
+import axios from 'axios';
 
 const SocialLogin = () => {
     // integration of react firebase hooks here
@@ -18,10 +18,20 @@ const SocialLogin = () => {
 
     // eslint-disable-next-line no-empty-pattern
     // const [] = useAccount(user)
-    useAccount(user?.user)
+
 
     if (user) {
-        console.log(user);
+        const email = user?.user?.email
+        const displayName = user?.user?.displayName
+        const UpdateData = { email, displayName }
+        console.log(user?.user?.displayName);
+        (async () => {
+            const { data } = await axios.put(
+                `http://localhost:5000/users/${user?.email}`,
+                UpdateData
+            );
+            console.log(data);
+        })();
         toast.success('Logged In Successfully!!!');
     }
 

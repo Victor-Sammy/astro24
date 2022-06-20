@@ -12,7 +12,8 @@ const UpdateName = () => {
   const [user, loading] = useAuthState(auth);
   const email = user?.email;
   //account hook call
-  const [account] = useAccount(user);
+  const { account } = useAccount(user);
+  console.log(account);
   const { _id, first_name, last_name, ...rest } = account;
   //state for button toggle
   const [editPersonalInfo, setEditPersonalInfo] = useState(false);
@@ -53,7 +54,7 @@ const UpdateName = () => {
             {...register("first_name")}
             className="h-12 rounded-sm border-2 pl-4"
             disabled={!editPersonalInfo ? true : false}
-            defaultValue={splitName[0]}
+            defaultValue={first_name || splitName[0]}
             type="text"
             name="first_name"
           />
@@ -62,7 +63,7 @@ const UpdateName = () => {
             {...register("last_name")}
             className="h-12 rounded-sm border-2 pl-4"
             disabled={!editPersonalInfo ? true : false}
-            defaultValue={splitName[1]}
+            defaultValue={last_name || splitName[1]}
             type="text"
           />
           <button

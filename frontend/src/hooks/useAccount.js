@@ -1,4 +1,4 @@
-import axios from "axios";
+/* import axios from "axios";
 import { useEffect, useState } from "react";
 
 const useAccount = (user) => {
@@ -15,8 +15,36 @@ const useAccount = (user) => {
             })();
         }
     }, [user]);
-    // console.log(account);
-    return [account]
+    console.log(account && account);
+    return { email: account?.email }
+};
+
+export default useAccount; */
+
+
+
+
+import { useQuery } from "react-query";
+
+const useAccount = (user) => {
+    const email = user?.email
+    const { isLoading, error, data: account } = useQuery('accountData', () =>
+        fetch(`http://localhost:5000/users/${email}`).then(res =>
+            res.json()
+        )
+    )
+    if (isLoading) return <p>Loading</p>
+    if (error) {
+        console.log(error);
+    }
+
+    if (account) {
+        // console.log(account);
+        return { account }
+    }
+
+
 };
 
 export default useAccount;
+
