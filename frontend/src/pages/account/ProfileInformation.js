@@ -10,7 +10,7 @@ const ProfileInformation = () => {
             {/* personal info */}
             <UpdateName />
             {/* gender */}
-            {/* <UpdateGender /> */}
+            <UpdateGender />
             {/* email update */}
             <UpdateEmail />
             {/* phone number update update */}
