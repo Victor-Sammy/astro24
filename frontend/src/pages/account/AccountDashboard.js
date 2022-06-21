@@ -4,13 +4,26 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
 
 
 const AccountDashboard = () => {
     //user from firebase useAuthState hook
     const [user, loading] = useAuthState(auth)
+    //you should skip code repeat. so we can you use custom hook but when I'm gonna use custom hook it throw me a error. I think I will fix this error later
+    const { isLoading, error, data: account } = useQuery('accountData', () =>
+        fetch(`http://localhost:5000/users/${user?.email}`).then(res =>
+            res.json()
+        )
+    )
+
+    //------------------------------------
     //is loading
-    if (loading) return <p>Loading...</p>
+    if (loading || isLoading) return <p>Loading...</p>
+    //is error
+    if (error) {
+        console.log(error);
+    }
 
     return (
         <div className='pt-24 bg-base-200'>
@@ -39,7 +52,7 @@ const AccountDashboard = () => {
                                 </div>
                                 <div className='flex items-start flex-col '>
                                     <p>Hello</p>
-                                    <h4 className='text-lg font-semibold'>{user?.displayName}</h4>
+                                    <h4 className='text-lg font-semibold'>{account?.first_name + " " + account?.last_name}</h4>
                                 </div>
                             </div>
 

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 
 const UpdateGender = () => {
@@ -51,6 +52,7 @@ const UpdateGender = () => {
                                 { ...rest, gender: 'male' }
                             );
                             console.log(data);
+                            toast.success('Gender successfully updated!!!')
                         })();
                     }}
                 />
@@ -72,6 +74,7 @@ const UpdateGender = () => {
                                 { ...rest, gender: 'female' }
                             );
                             console.log(data);
+                            toast.success('Gender successfully updated!!!')
                         })();
                     }}
                 />

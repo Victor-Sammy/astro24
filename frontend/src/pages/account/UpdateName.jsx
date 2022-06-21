@@ -4,6 +4,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useQuery } from "react-query";
+import { toast } from "react-toastify";
 
 const UpdateName = () => {
   //hook form
@@ -41,6 +42,8 @@ const UpdateName = () => {
         UpdateData
       );
       console.log(data);
+      setEditPersonalInfo(false);
+      toast.success("Name successfully updated!!!");
     })();
   };
 

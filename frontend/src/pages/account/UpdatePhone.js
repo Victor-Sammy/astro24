@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import { useQuery } from "react-query";
+import { toast } from 'react-toastify';
 
 const UpdatePhone = () => {
     //hook form
@@ -39,6 +40,8 @@ const UpdatePhone = () => {
                 `http://localhost:5000/users/${user?.email}`, UpdateData
             );
             console.log(data);
+            setEditPhone(false)
+            toast.success('Phone number successfully updated!!!')
         })();
     }
     return (

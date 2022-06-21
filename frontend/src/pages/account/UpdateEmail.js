@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import { useQuery } from "react-query";
+import { toast } from 'react-toastify';
 
 const UpdateEmail = () => {
     //hook form
@@ -39,6 +40,8 @@ const UpdateEmail = () => {
                 `http://localhost:5000/users/${user?.email}`, UpdateData
             );
             console.log(data);
+            setEditEmail(false)
+            toast.success('Email successfully updated!!!')
         })();
     }
     return (
