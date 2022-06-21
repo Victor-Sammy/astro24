@@ -8,7 +8,7 @@ const ProfileInformation = () => {
     return (
         <div className='flex flex-col items-start p-8 justify-start'>
             {/* personal info */}
-            {/* <UpdateName /> */}
+            <UpdateName />
             {/* gender */}
             {/* <UpdateGender /> */}
             {/* email update */}

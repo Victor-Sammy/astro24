@@ -16,7 +16,7 @@ const UpdateEmail = () => {
             res.json()
         )
     )
-    console.log("account", account);
+
     //------------------------------------
     //use state for toggle edit  button
     const [editEmail, setEditEmail] = useState(false)
@@ -28,7 +28,6 @@ const UpdateEmail = () => {
     }
     // form handle
     const onSubmit = async (email) => {
-        console.log("email", email);
 
         // console.log(UpdateData);
         (async () => {
@@ -58,7 +57,7 @@ const UpdateEmail = () => {
                 <input
                     {...register("email")}
                     className='h-12 rounded-sm border-2 pl-4'
-                    disabled={!editEmail ? true : false} defaultValue={account?.email}
+                    disabled={!editEmail ? true : false} defaultValue={account.AltEmail || account?.email}
                     type="text"
                 />
                 <button

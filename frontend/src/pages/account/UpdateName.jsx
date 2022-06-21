@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
-import useAccount from "../../hooks/useAccount";
 import axios from "axios";
+import { useQuery } from "react-query";
 
 const UpdateName = () => {
   //hook form
@@ -11,22 +11,30 @@ const UpdateName = () => {
   //user from fire base useAuthState hook
   const [user, loading] = useAuthState(auth);
   const email = user?.email;
-  //account hook call
-  const { account } = useAccount(user);
-  console.log(account);
-  const { _id, first_name, last_name, ...rest } = account;
+  //you should skip code repeat. so we can you use custom hook but when I'm gonna use custom hook it throw me a error. I think I will fix this error later
+  const {
+    isLoading,
+    error,
+    data: account,
+  } = useQuery("accountData", () =>
+    fetch(`http://localhost:5000/users/${user?.email}`).then((res) =>
+      res.json()
+    )
+  );
+  // console.log("account", account);
+  //------------------------------------
   //state for button toggle
   const [editPersonalInfo, setEditPersonalInfo] = useState(false);
   //if loading
-  if (loading) return <p>Loading...</p>;
-  //split name
-  const splitName = user?.displayName?.split(" ");
   // form handle
   const onSubmit = async (data) => {
-    const first_name = data?.first_name || splitName[0];
-    const last_name = data?.last_name || splitName[1];
-    const UpdateData = { first_name, last_name, ...rest };
-    // console.log(UpdateData);
+    const { _id, first_name, last_name, ...rest } = account;
+    const UpdateData = {
+      first_name: data?.first_name,
+      last_name: data?.last_name,
+      ...rest,
+    };
+    console.log("updated", UpdateData);
     (async () => {
       const { data } = await axios.put(
         `http://localhost:5000/users/${email}`,
@@ -35,6 +43,13 @@ const UpdateName = () => {
       console.log(data);
     })();
   };
+
+  //is loading
+  if (loading || isLoading) return <p>Loading...</p>;
+  //is error
+  if (error) {
+    console.log(error);
+  }
 
   return (
     <>
@@ -54,16 +69,15 @@ const UpdateName = () => {
             {...register("first_name")}
             className="h-12 rounded-sm border-2 pl-4"
             disabled={!editPersonalInfo ? true : false}
-            defaultValue={first_name || splitName[0]}
+            defaultValue={account?.first_name}
             type="text"
-            name="first_name"
           />
           {/* last name */}
           <input
             {...register("last_name")}
             className="h-12 rounded-sm border-2 pl-4"
             disabled={!editPersonalInfo ? true : false}
-            defaultValue={last_name || splitName[1]}
+            defaultValue={account?.last_name}
             type="text"
           />
           <button
