@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuthState } from "react-firebase-hooks/auth"
+import auth from '../../../firebase.init';
+import NavigateAccount from './NavigateAccount';
+
 
 const Header = () => {
+    const [user, Loading] = useAuthState(auth)
+
+    //is loading 
+    if (Loading) return <p>Loading...</p>
 
     // rendering the header component here
     return (
@@ -24,10 +32,11 @@ const Header = () => {
                     </div>
                     <div className='navbar-end hidden md:inline-flex'>
                         <ul className='menu menu-horizontal p-0'>
-                            <li><Link to="/wallet">Wallet</Link></li>
-                            <li><Link to="/account">Account</Link></li>
+                            {/* dropdown on hover */}
+                            <NavigateAccount user={user} />
+
                         </ul>
-                        <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
+
                     </div>
                 </div>
             </nav>

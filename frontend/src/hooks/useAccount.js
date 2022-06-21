@@ -18,7 +18,11 @@ const useAccount = (user) => {
     console.log(account && account);
     return { email: account?.email }
 };
-
+1.my profile
+2. order
+whishlist
+walet
+logout
 export default useAccount; */
 
 
