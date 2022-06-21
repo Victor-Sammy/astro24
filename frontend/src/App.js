@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Login from './pages/Authentication/Login/Login';
+import Signup from './pages/Authentication/Signup/Signup';
 import Description from './pages/Description/Description/Description';
 import Home from './pages/Home/Home/Home';
 import Footer from './pages/Shared/Footer/Footer';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/description' element={<Description />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
         <Route path='/wallet' element={<Wallet />} />
         <Route path='/recharge/:id' element={<RechargeNow />} />
       </Routes>

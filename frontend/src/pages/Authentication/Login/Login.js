@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
@@ -31,10 +32,10 @@ const Login = () => {
     return (
         <section className='bg-accent min-h-screen flex pt-20'>
             <PageTitle title={'Login'} />
-            <div className='w-[70%] bg-secondary hidden md:block'>
+            <div className='w-[70%] bg-secondary hidden 2xl:block'>
                 {/* blank for now */}
             </div>
-            <div className='w-full md:w-[30%] flex justify-center items-center'>
+            <div className='w-full 2xl:w-[30%] flex justify-center items-center'>
                 <div className='shadow-3xl w-full mx-3 md:mx-10 p-5 rounded-3xl'>
                     <div className='text-left mb-6'>
                         <h3 className='text-left font-semibold text-3xl text-primary'>Login</h3>
@@ -84,7 +85,7 @@ const Login = () => {
                         </div>
                         <button type='submit' className='btn btn-primary w-full text-accent text-base capitalize border-2 rounded-xl hover:bg-accent hover:text-primary duration-300'>Log In</button>
                         <div className='mt-2'>
-                            <p className='text-secondary text-sm'>Don't Have an account? <button className='text-primary underline hover:opacity-60 duration-300'>Register Now</button></p>
+                            <p className='text-secondary text-sm'>Don't have an account? <Link to='/signup' className='text-primary underline hover:opacity-60 duration-300'>Register Now</Link></p>
                         </div>
                         <div className='mt-2'>
                             <p className='text-red-600 text-sm'>{error?.message && 'Invalid ID or Password'}</p>
