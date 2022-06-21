@@ -1,0 +1,71 @@
+
+{
+    "_id": 1001,
+    "name": "Purple Sapphire",
+    "description": "Blue Sapphire, popularly known as Neelam, is the gemstone of the planet Saturn(shani) and is considered as the strongest and effective gemstone. It is believed that the Blue Sapphire gemstone is highly effective for people facing problems in business, career, health and marriage.",
+    "price": 53320,
+    "quantity": 20,
+    "ratings": 5.00,
+    "totalVotes": 500,
+    "sizes": [1, 2, 2.5, 3.5],
+    "images": [
+        {
+            "original": "https://imgpile.com/images/RfsTb3.png",
+            "thumbnail": "https://imgpile.com/images/RfsTb3.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfs5Sb.png",
+            "thumbnail": "https://imgpile.com/images/Rfs5Sb.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfswH8.png",
+            "thumbnail": "https://imgpile.com/images/RfswH8.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfsUGS.png",
+            "thumbnail": "https://imgpile.com/images/RfsUGS.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfsbml.png",
+            "thumbnail": "https://imgpile.com/images/Rfsbml.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfs5Sb.png",
+            "thumbnail": "https://imgpile.com/images/Rfs5Sb.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfswH8.png",
+            "thumbnail": "https://imgpile.com/images/RfswH8.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfsUGS.png",
+            "thumbnail": "https://imgpile.com/images/RfsUGS.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfsbml.png",
+            "thumbnail": "https://imgpile.com/images/Rfsbml.png"
+        },
+        {
+            "original": "https://imgpile.com/images/RfswH8.png",
+            "thumbnail": "https://imgpile.com/images/RfswH8.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/RfsUGS.png",
+            "thumbnail": "https://imgpile.com/images/RfsUGS.png"
+        },
+
+        {
+            "original": "https://imgpile.com/images/Rfsbml.png",
+            "thumbnail": "https://imgpile.com/images/Rfsbml.png"
+        }
+    ]
+}

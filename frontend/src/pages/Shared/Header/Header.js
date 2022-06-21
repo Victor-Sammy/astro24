@@ -14,7 +14,7 @@ const Header = () => {
     // rendering the header component here
     return (
         <header className='bg-primary w-full fixed z-50'>
-            <nav className='md:w-4/5 mx-auto'>
+            <nav className='xl:w-4/5 mx-auto'>
                 <div className='navbar text-accent py-5'>
                     <div className='navbar-start'>
                         <div className='dropdown'>
