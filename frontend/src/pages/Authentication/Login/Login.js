@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
@@ -14,6 +15,9 @@ const Login = () => {
 
     // integration react hook form here
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
+    // integration of react hooks here
+    const [showPasswordResetModal, setShowPasswordResetModal] = useState(false);
 
     // event handler for signing with email and password
     const handleSignInWithEmailAndPassword = async (data) => {
@@ -82,7 +86,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div className='flex justify-end mb-5'>
-                            <label htmlFor='forgot-password-modal' className='capitalize font-normal underline text-primary hover:opacity-60 duration-300 text-sm cursor-pointer'>Forgot Password?</label>
+                            <label onClick={() => setShowPasswordResetModal(true)} htmlFor='forgot-password-modal' className='capitalize font-normal underline text-primary hover:opacity-60 duration-300 text-sm cursor-pointer'>Forgot Password?</label>
                         </div>
                         <button type='submit' className='btn btn-primary w-full text-accent text-base capitalize border-2 rounded-xl hover:bg-accent hover:text-primary duration-300'>Log In</button>
                         <div className='mt-2'>
@@ -95,7 +99,9 @@ const Login = () => {
                     <SocialLogin />
                 </div>
             </div>
-            <ForgotPasswordModal />
+            {
+                showPasswordResetModal && <ForgotPasswordModal setShowPasswordResetModal={setShowPasswordResetModal} />
+            }
         </section>
     );
 };
