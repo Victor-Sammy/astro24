@@ -1,7 +1,8 @@
 import React from 'react'
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
+import { MdChevronLeft, MdChevronRight, MdArrowForward } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
-function Best() {
+const Best = () => {
   const slideLeft = () => {
     var slider = document.getElementById('slider')
     slider.scrollLeft = slider.scrollLeft - 500
@@ -13,8 +14,14 @@ function Best() {
   return (
     <React.Fragment>
       <section className='lg:px-40 mt-20 lg:pb-10 md:pb-5'>
-        <div className='cat-title lg:pl-2 lg:p-5 md:p-3 lg:text-2xl md:text-lg font-semibold text-white bg-secondary mb-1 rounded-md'>
-          Best Sellers
+        <div className='flex items-center justify-between border border-secondary rounded-md'>
+          <div className='cat-title lg:pl-2 lg:p-5 md:p-3 lg:text-2xl md:text-lg font-semibold text-secondary mb-1 rounded-md'>
+            Best Sellers
+          </div>
+          <div className='btn lg:mr-2 lg:text-lg md:text-sm sm:text-sm font-semibold text-primary bg-transparent mb-1 rounded-md hover:text-white border-none'>
+            <Link to='/bestAll'>View all</Link>
+            <MdArrowForward className='text-lg' />
+          </div>
         </div>
         <div className='best-sellers relative lg:h-96 md:h-52 flex items-center justify-center bg-white mb-10 drop-shadow-3xl rounded-md'>
           <MdChevronLeft
@@ -26,7 +33,7 @@ function Best() {
             id='slider'
             className='w-full h-full flex items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth cursor-pointer'
           >
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -41,7 +48,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -56,7 +63,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -71,7 +78,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -86,7 +93,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -101,7 +108,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -116,7 +123,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -131,7 +138,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -146,7 +153,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
@@ -161,7 +168,7 @@ function Best() {
                 ₹250
               </p>
             </div>
-            <div className='lg:mr-5 md:mr-3 hover:scale-75 ease-in-out duration-300 border rounded-md shadow-md'>
+            <div className='lg:mr-5 md:mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md'>
               <div className='img-con lg:w-[200px] md:w-[120px] flex justify-center items-center cursor-pointer'>
                 <img
                   className='lg:w-full md:w-full'
