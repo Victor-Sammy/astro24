@@ -1,21 +1,21 @@
-import { Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './App.css';
-import AccountDashboard from './pages/account/AccountDashboard';
-import CardInfo from './pages/account/CardInfo';
-import ManageAddress from './pages/account/ManageAddress';
-import ProfileInformation from './pages/account/ProfileInformation';
-import Login from './pages/Authentication/Login/Login';
-import Signup from './pages/Authentication/Signup/Signup';
-import Description from './pages/Description/Description/Description';
-import Home from './pages/Home/Home/Home';
-import Footer from './pages/Shared/Footer/Footer';
-import Header from './pages/Shared/Header/Header';
-import RechargeNow from './pages/wallet/RechargeNow';
-import Wallet from './pages/wallet/Wallet';
-import ReasonForReturn from "./pages/return/ReasonForReturn"
-import Compare from './pages/compare/Compare';
+import { Route, Routes } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import './App.css'
+import AccountDashboard from './pages/account/AccountDashboard'
+import CardInfo from './pages/account/CardInfo'
+import ManageAddress from './pages/account/ManageAddress'
+import ProfileInformation from './pages/account/ProfileInformation'
+import Login from './pages/Authentication/Login/Login'
+import Signup from './pages/Authentication/Signup/Signup'
+import Description from './pages/Description/Description/Description'
+import Home from './pages/Home/Home/Home'
+import Footer from './pages/Shared/Footer/Footer'
+import Header from './pages/Shared/Header/Header'
+import RechargeNow from './pages/wallet/RechargeNow'
+import Wallet from './pages/wallet/Wallet'
+import ReasonForReturn from './pages/return/ReasonForReturn'
+import Compare from './pages/compare/Compare'
 
 function App() {
   return (
@@ -35,13 +35,16 @@ function App() {
           <Route index element={<ProfileInformation />} />
           <Route path='manage-address' element={<ManageAddress />} />
           <Route path='card-info' element={<CardInfo />} />
-
         </Route>
+        <Route path='/productsRecent' element={<RecentAll />} />
+        <Route path='/newlyAll' element={<NewlyAll />} />
+        <Route path='/bestAll' element={<BestAll />} />
+        <Route path='/upcomingAll' element={<UpcomingAll />} />
       </Routes>
       <Footer />
       <ToastContainer position='bottom-right' />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
