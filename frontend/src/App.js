@@ -16,6 +16,10 @@ import RechargeNow from './pages/wallet/RechargeNow'
 import Wallet from './pages/wallet/Wallet'
 import ReasonForReturn from './pages/return/ReasonForReturn'
 import Compare from './pages/compare/Compare'
+import RecentAll from './pages/productsRecent/RecentAll'
+import NewlyAll from './pages/newlyAll/NewlyAll'
+import UpcomingAll from './pages/upcomingAll/UpcomingAll'
+import BestAll from './pages/bestAll/BestAll'
 
 function App() {
   return (
