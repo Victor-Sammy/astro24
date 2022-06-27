@@ -63,7 +63,7 @@ const TableRow = () => {
                 <td
                     class="border border-base-200 flex flex-col justify-center items-center w-60 h-24 gap-2">
                     <button className='btn btn-sm rounded-sm btn-primary '>Add To Cart</button>
-                    <button className='btn btn-sm rounded-sm btn-error'>Add To Cart</button>
+                    <button className='btn btn-sm rounded-sm btn-error'>Remove</button>
                 </td>
             </tr>
 

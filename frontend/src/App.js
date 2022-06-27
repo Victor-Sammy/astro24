@@ -14,12 +14,13 @@ import Footer from './pages/Shared/Footer/Footer'
 import Header from './pages/Shared/Header/Header'
 import RechargeNow from './pages/wallet/RechargeNow'
 import Wallet from './pages/wallet/Wallet'
-import ReasonForReturn from './pages/return/ReasonForReturn'
 import Compare from './pages/compare/Compare'
 import RecentAll from './pages/productsRecent/RecentAll'
 import NewlyAll from './pages/newlyAll/NewlyAll'
 import UpcomingAll from './pages/upcomingAll/UpcomingAll'
 import BestAll from './pages/bestAll/BestAll'
+import Return from './pages/return/Return'
+import Offers from './pages/offer/Offers'
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/return' element={<ReasonForReturn />} />
+        <Route path='/return' element={< Return />} />
+        <Route path='/offers' element={<Offers />} />
         <Route path='/compare' element={<Compare />} />
         <Route path='/description' element={<Description />} />
         <Route path='/login' element={<Login />} />
