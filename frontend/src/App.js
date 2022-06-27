@@ -16,6 +16,7 @@ import RechargeNow from './pages/wallet/RechargeNow';
 import Wallet from './pages/wallet/Wallet';
 import Compare from './pages/compare/Compare';
 import Return from './pages/return/Return';
+import Offers from './pages/offer/Offers';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/return' element={< Return />} />
+        <Route path='/offers' element={<Offers />} />
         <Route path='/compare' element={<Compare />} />
         <Route path='/description' element={<Description />} />
         <Route path='/login' element={<Login />} />
