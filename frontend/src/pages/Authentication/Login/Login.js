@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
@@ -18,6 +18,7 @@ const Login = () => {
 
     // integration of react hooks here
     const [showPasswordResetModal, setShowPasswordResetModal] = useState(false);
+    const navigate = useNavigate();
 
     // event handler for signing with email and password
     const handleSignInWithEmailAndPassword = async (data) => {
@@ -27,6 +28,7 @@ const Login = () => {
 
     if (user) {
         toast.success('Logged In Successfully!!!');
+        navigate('/');
     }
 
     if (loading) {

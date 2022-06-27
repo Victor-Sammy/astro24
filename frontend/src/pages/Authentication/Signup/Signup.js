@@ -1,8 +1,9 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
@@ -18,6 +19,7 @@ const Signup = () => {
 
     // integration of react hooks here
     const [errorMsg, setErrorMsg] = useState('');
+    const navigate = useNavigate();
 
     // event handler for signing up
     const handleSignUp = async (data) => {
@@ -30,7 +32,9 @@ const Signup = () => {
 
                 // create REST API for user credentials here...
 
-                toast.success('Sign Up Successful!!!');
+                toast.success('Sign Up Successful!!! Now Log In To Your Account.');
+                signOut(auth);
+                navigate('/login');
             } catch (e) {
 
             }

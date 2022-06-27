@@ -5,10 +5,14 @@ import { BsGoogle } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
     // integration of react firebase hooks here
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    // integration of react hooks here
+    const navigate = useNavigate();
 
     // event handler for signing in with google
     const handleSignInWithGoogle = async () => {
@@ -32,8 +36,9 @@ const SocialLogin = () => {
                 console.log(data);
             })();
             toast.success('Logged In Successfully!!!');
+            navigate('/');
         }
-    }, [user])
+    }, [user, navigate]);
 
 
 

@@ -28,7 +28,7 @@ const Header = () => {
                                 <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
                             </ul>
                         </div>
-                        <a className='btn btn-ghost normal-case text-2xl font-bold'>Astrology<span className='font-extralight text-lg'>24</span></a>
+                        <Link to='/' className='btn btn-ghost normal-case text-2xl font-bold'>Astrology<span className='font-extralight text-lg'>24</span></Link>
                     </div>
                     <div className='navbar-end hidden md:inline-flex'>
                         <ul className='menu menu-horizontal p-0'>
