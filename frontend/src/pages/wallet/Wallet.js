@@ -17,7 +17,7 @@ const Wallet = () => {
     navigate(`/recharge/${amount}`);
   };
   return (
-    <div className="w-[80%] mx-auto py-28" >
+    <div className="w-[90%] xl:w-[80%] mx-auto py-28" >
       {/* balance & history section*/}
       <section className="flex justify-between items-center">
         {/* available balance */}

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import { Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './App.css';
-import AccountDashboard from './pages/account/AccountDashboard';
-import CardInfo from './pages/account/CardInfo';
-import ManageAddress from './pages/account/ManageAddress';
-import ProfileInformation from './pages/account/ProfileInformation';
-import Login from './pages/Authentication/Login/Login';
-import Signup from './pages/Authentication/Signup/Signup';
-import Description from './pages/Description/Description/Description';
-import Home from './pages/Home/Home/Home';
-import Footer from './pages/Shared/Footer/Footer';
-import Header from './pages/Shared/Header/Header';
-import RechargeNow from './pages/wallet/RechargeNow';
-import Wallet from './pages/wallet/Wallet';
-import Compare from './pages/compare/Compare';
-import Return from './pages/return/Return';
-import Offers from './pages/offer/Offers';
-=======
 import { Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -35,13 +14,13 @@ import Footer from './pages/Shared/Footer/Footer'
 import Header from './pages/Shared/Header/Header'
 import RechargeNow from './pages/wallet/RechargeNow'
 import Wallet from './pages/wallet/Wallet'
-import ReasonForReturn from './pages/return/ReasonForReturn'
 import Compare from './pages/compare/Compare'
 import RecentAll from './pages/productsRecent/RecentAll'
 import NewlyAll from './pages/newlyAll/NewlyAll'
 import UpcomingAll from './pages/upcomingAll/UpcomingAll'
 import BestAll from './pages/bestAll/BestAll'
->>>>>>> 5a2bafd6052c521b47d15f21bc13f67044088d53
+import Return from './pages/return/Return'
+import Offers from './pages/offer/Offers'
 
 function App() {
   return (

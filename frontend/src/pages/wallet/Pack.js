@@ -5,10 +5,10 @@ const Pack = ({ pack: { amount } }) => {
   return (
     <div
       onClick={() => navigate(`/recharge/${amount}`)}
-      class="card  bg-white transform duration-200 hover:bg-[#025AF0] hover:text-white shadow-xl border-2 border-[#025AF0] "
+      class="card max-w-xs xl:max-w-[200px]  bg-white transform duration-200 hover:bg-[#025AF0] hover:text-white shadow-xl border-2 border-[#025AF0] "
     >
-      <div class="card-body items-center text-center">
-        <h2 class="card-title">₹ {amount}</h2>
+      <div class="card-body items-center text-center ">
+        <span class="text-lg font-bold">₹ {amount}</span>
         <button>Pay Now</button>
       </div>
     </div>
