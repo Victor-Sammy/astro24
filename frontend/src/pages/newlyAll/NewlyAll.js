@@ -79,9 +79,6 @@ const NewlyAll = () => {
         <div className='parenthesis'>({items.length})</div>
       </div>
 
-      <div className='card-title text-primary font-medium flex items-center justify-start'>
-        Recently Viewed
-      </div>
       <div className='card bg-white lg:mx-auto w-[1210px] rounded-md border border-opacity-30 border-primary drop-shadow-xl'>
         <div className='row flex flex-wrap bg-white mt-10 mb-10 rounded-md'>
           <div className='item hover:scale-105 ml-5 mr-10 ease-in-out duration-300 border rounded-md shadow-md cursor-pointer'>

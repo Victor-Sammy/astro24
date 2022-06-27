@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { BsFillShareFill, BsFillSuitHeartFill, BsCartPlus } from 'react-icons/bs';
 import { BiPurchaseTagAlt } from 'react-icons/bi';
+import { IoIosGitCompare } from 'react-icons/io';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
 import AvailableSizes from '../AvailableSizes/AvailableSizes';
 import ProductGallery from '../ProductGallery/ProductGallery';
 import QuantityChooser from '../QuantityChooser/QuantityChooser';
+import { MdArrowForward, MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 const Description = () => {
     // integration of react hooks here
@@ -16,6 +19,18 @@ const Description = () => {
             .then(res => res.json())
             .then(data => setGem(data));
     }, []);
+
+    // event handler for left slide button
+    const slideL = () => {
+        var slid = document.getElementById('slid')
+        slid.scrollLeft = slid.scrollLeft - 500
+    }
+
+    // event handler for right slide button
+    const slideR = () => {
+        var slid = document.getElementById('slid')
+        slid.scrollLeft = slid.scrollLeft + 500
+    }
 
     // rendering description component here
     return (
@@ -54,15 +69,197 @@ const Description = () => {
                         </div>
                     </div>
                 </div>
-                <div className='block 2xl:grid grid-cols-2 gap-6 w-full'>
+                <div className='block 2xl:grid grid-cols-3 gap-6 w-full'>
                     <button className='btn btn-primary text-accent capitalize font-normal rounded-xl w-full'>
                         <BiPurchaseTagAlt className='mr-2 text-xl' />
                         Buy Now
                     </button>
-                    <button className='btn btn-outline btn-secondary text-accent capitalize font-normal rounded-xl mt-5 2xl:mt-0 w-full'>
+                    <button className='btn btn-secondary text-accent capitalize font-normal rounded-xl mt-5 2xl:mt-0 w-full hover:opacity-60'>
                         <BsCartPlus className='mr-2 text-xl' />
                         Add To Cart
                     </button>
+                    <button className='btn btn-outline btn-secondary text-accent capitalize font-normal rounded-xl mt-5 2xl:mt-0 w-full'>
+                        <IoIosGitCompare className='mr-2 text-xl' />
+                        Compare
+                    </button>
+                </div>
+            </div>
+            <div className='w-[95%] 2xl:w-4/5 mx-auto mt-32 mb-10 bg-accent shadow-2xl p-3 md:p-5 2xl:p-8 rounded-3xl'>
+                <div className='flex items-center justify-between rounded-md'>
+                    <div className='cat-title lg:text-2xl md:text-lg font-semibold text-secondary mb-1 rounded-md'>
+                        Related Gems
+                    </div>
+                    <div className='btn btn-link lg:text-lg md:text-sm sm:text-sm font-semibold text-primary bg-transparent rounded-md border-none capitalize p-0 hover:no-underline hover:opacity-60'>
+                        <Link to='/upcomingAll'>View all</Link>
+                        <MdArrowForward className='text-lg' />
+                    </div>
+                </div>
+                <div className='upcoming relative flex items-center justify-center bg-white mb-10 drop-shadow-3xl rounded-md'>
+                    <MdChevronLeft
+                        className='cursor-pointer opacity-50 hover:opacity-100'
+                        onClick={slideL}
+                        size={40}
+                    />
+                    <div
+                        id='slid'
+                        className='w-full h-full flex items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth cursor-pointer'
+                    >
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                        <div className='lg:mr-5 mr-3 hover:scale-105 ease-in-out duration-300 border rounded-md shadow-md p-5 2xl:p-0'>
+                            <div className='img-con w-full flex justify-center items-center cursor-pointer'>
+                                <img
+                                    className='w-full'
+                                    src='https://i.pinimg.com/236x/2a/3b/2b/2a3b2b2e841721454fe9da3023acaa2c.jpg'
+                                    alt='white topaz'
+                                />
+                            </div>
+                            <h1 className='text-secondary font-semibold lg:text-lg md:text-sm text-center'>
+                                Gem
+                            </h1>
+                            <p className='text-primary lg:text-xl md:text-lg text-center'>
+                                ₹250
+                            </p>
+                        </div>
+                    </div>
+                    <MdChevronRight
+                        className='cursor-pointer opacity-50 hover:opacity-100'
+                        onClick={slideR}
+                        size={40}
+                    />
                 </div>
             </div>
         </section>
