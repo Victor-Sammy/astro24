@@ -1,4 +1,5 @@
 import React from 'react'
+import PageTitle from '../Shared/PageTitle/PageTitle'
 
 const BestAll = () => {
   const items = [
@@ -80,6 +81,7 @@ const BestAll = () => {
   ]
   return (
     <section className='min-h-screen pt-[88px] md:px-3 lg:px-0'>
+      <PageTitle title={'all best sellers'} />
       <div className='flex justify-center'>
         <div className='title text-center'>All Products</div>
         <div className='parenthesis'>({items.length})</div>

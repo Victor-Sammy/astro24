@@ -21,6 +21,7 @@ import UpcomingAll from './pages/upcomingAll/UpcomingAll'
 import BestAll from './pages/bestAll/BestAll'
 import Return from './pages/return/Return'
 import Offers from './pages/offer/Offers'
+import Cart from './pages/cart/Cart'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/return' element={< Return />} />
+        <Route path='/return' element={<Return />} />
         <Route path='/offers' element={<Offers />} />
         <Route path='/compare' element={<Compare />} />
         <Route path='/description' element={<Description />} />
@@ -46,6 +47,7 @@ function App() {
         <Route path='/newlyAll' element={<NewlyAll />} />
         <Route path='/bestAll' element={<BestAll />} />
         <Route path='/upcomingAll' element={<UpcomingAll />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       <Footer />
       <ToastContainer position='bottom-right' />

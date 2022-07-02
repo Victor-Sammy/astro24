@@ -13,7 +13,7 @@ const New = () => {
   }
   return (
     <React.Fragment>
-      <section className='lg:px-40 mt-20 lg:pb-10 md:pb-5'>
+      <section className='xl:px-40 mt-20 xl:pb-10 md:pb-5 px-2'>
         <div className='flex items-center justify-between border border-secondary rounded-md'>
           <div className='cat-title lg:pl-2 lg:p-5 md:p-3 lg:text-2xl md:text-lg font-semibold text-secondary mb-1 rounded-md'>
             Newly Added
