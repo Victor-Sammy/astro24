@@ -45,7 +45,7 @@ const NavigateAccount = ({ user }) => {
                         className='hover:bg-transparent'
                         icon={faHeart} /><Link
                             className='hover:bg-transparent'
-                            to="/">Wishlist</Link></li>
+                            to='/wishlist'>Wishlist</Link></li>
                 {/* wallet */}
                 <li
                     className='flex items-center hover:bg-base-200 border-b border-base-200'> <FontAwesomeIcon

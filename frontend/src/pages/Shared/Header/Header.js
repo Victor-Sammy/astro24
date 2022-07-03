@@ -24,8 +24,6 @@ const Header = () => {
                             <ul tabIndex='0' className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52'>
                                 <li><Link to="/wallet">Wallet</Link></li>
                                 <li><Link to="/account">Wallet</Link></li>
-
-                                <a className='btn btn-secondary text-accent capitalize font-normal rounded-xl'>Connect With Us</a>
                             </ul>
                         </div>
                         <Link to='/' className='btn btn-ghost normal-case text-2xl font-bold'>Astrology<span className='font-extralight text-lg'>24</span></Link>
