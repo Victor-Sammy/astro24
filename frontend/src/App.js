@@ -22,6 +22,7 @@ import BestAll from './pages/bestAll/BestAll'
 import Return from './pages/return/Return'
 import Offers from './pages/offer/Offers'
 import Cart from './pages/cart/Cart'
+import Wishlist from './pages/Wishlist/Wishlist/Wishlist'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path='manage-address' element={<ManageAddress />} />
           <Route path='card-info' element={<CardInfo />} />
         </Route>
+        <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/productsRecent' element={<RecentAll />} />
         <Route path='/newlyAll' element={<NewlyAll />} />
         <Route path='/bestAll' element={<BestAll />} />

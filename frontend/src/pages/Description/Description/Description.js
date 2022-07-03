@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 const Description = () => {
     // integration of react hooks here
     const [gem, setGem] = useState({});
+    const [addToWishlist, setAddToWishlist] = useState(false);
 
     // fetching fake data here temporarily... Will add real data when the database integrated
     useEffect(() => {
@@ -53,7 +54,7 @@ const Description = () => {
                         </div>
                         <div className='flex'>
                             <BsFillShareFill className='text-base-200 text-xl hover:scale-125 duration-300 cursor-pointer' />
-                            <BsFillSuitHeartFill className='text-base-200 text-xl ml-5 hover:scale-125 duration-300 cursor-pointer' />
+                            <BsFillSuitHeartFill onClick={() => setAddToWishlist(!addToWishlist)} className={`${addToWishlist ? 'text-red-500' : 'text-base-200'} text-xl ml-5 hover:scale-125 duration-300 cursor-pointer`} />
                         </div>
                     </div>
                     <div className='mt-5'>
